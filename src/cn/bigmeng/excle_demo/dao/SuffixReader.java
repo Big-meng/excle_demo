@@ -17,7 +17,7 @@ public class SuffixReader {
             byte[] buf = new byte[fin.available()];
             fin.read(buf);
             String suffix_str = new String(buf);
-            suffix_arr = suffix_str.split("\n");
+            suffix_arr = suffix_str.split("[\\s]+");
         } catch (FileNotFoundException e) {
             System.out.println("文件未找到！");
             e.printStackTrace();
